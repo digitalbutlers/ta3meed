@@ -1,0 +1,30 @@
+.partners-list {
+	column-count: 3;
+	column-gap: 20px;
+}
+
+@media screen and (max-width: 767px) {
+	.partners-list {
+		column-count: 2;
+		column-gap: 20px;
+	}
+}
+
+@media screen and (max-width: 478px) {
+	.partners-list {
+		column-count: 1;
+		column-gap: 20px;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.partners-list {
+		column-count: 1;
+		column-gap: 20px;
+	}
+
+	.secondary-data_item {
+		flex-direction: column;
+		row-gap: 15px;
+	}
+}
