@@ -1,29 +1,36 @@
-.pagination-container .fs-pagination ul{
-    display: flex;
-    column-gap: 5px;
+.pagination-container .fs-pagination ul {
+	display: flex;
+	column-gap: 5px;
 }
-.pagination-container .fs-pagination ul li a{
-    text-decoration: none;
-    border: none !important;
-    font-weight: 500;
-    font-size: 1.25rem;
-    line-height: 100%;
-    padding: 10px 23px;
-    border-radius: 10px !important;
-    min-width: 56px;
-    height: 56px;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.pagination-container .fs-pagination ul li a {
+	display: flex;
+	min-width: 56px;
+	height: 56px;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 23px;
+	border: none !important;
+	border-radius: 10px !important;
+	font-size: 1.25rem;
+	font-weight: 500;
+	line-height: 100%;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }
-.pagination-container .fs-pagination ul li a:hover{
-    color: #fff !important;
-    background-color: #64e8a4;
-    transition: all 0.3s ease;
+
+.pagination-container .fs-pagination ul li a:hover {
+	background-color: #64e8a4;
+	color: #fff !important;
+	transition: all 0.3s ease;
 }
+
 .fs-pagination ul li.fs-pagination-active a:hover {
-    color: #fff;
-    background-color: #64e8a4;
-    transition: all 0.3s ease;
+	background-color: #64e8a4;
+	color: #fff;
+	transition: all 0.3s ease;
 }
+
+
+
+

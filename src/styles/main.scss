@@ -400,7 +400,42 @@ body.arabic .arrow-horizontal {
 body.arabic .arrow-horizontal .arrow-vertical_number {
 	transform: rotateY(180deg);
 }
+.w-webflow-badge{
+    display: none !important;
+}
+  .wg-drop.country-selector .wgcurrent{
+    display: none;
+}
 
+  .wg-drop.country-selector ul,
+  .wg-drop.country-selector.closed ul{
+    display: flex !important;
+    position: relative !important;
+   }
+.wg-drop.country-selector a{
+    padding: 0 !important;
+    height: auto !important;
+    font-weight: 600;
+    font-size: 12px !important;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: var(--accent1) !important;
+}
+.wg-drop.country-selector ul{
+    border: none !important;
+    overflow: visible !important;
+}
+.wg-default.weglot-container--left, 
+.wg-default.weglot-container--left .country-selector{
+left: 0 !important;
+height: 0 !important;
+}
+.wg-default, .wg-default .country-selector {
+    position: relative !important;
+}
+  body.arabic .nav-link_drop{
+    text-align: right;
+}
 @media screen and (min-width: 1280px) {
 	.dropdown-lang {
 		margin-inline-end: 54px;
@@ -441,6 +476,24 @@ body.arabic .arrow-horizontal .arrow-vertical_number {
 	body.arabic .nav-menu {
 		box-shadow: inset -2px 0 10px 0 rgb(0 0 0 / 20%);
 	}
+	.wg-drop.country-selector a{
+        font-size: 18px !important;
+    }
+    body.arabic .wg-drop.country-selector a{
+        right: auto;
+        left: -30px;
+    }
+    body.arabic .nav-menu.w-nav-menu{
+        right: auto;
+        left: 0;
+    }
+  .nav-link_drop{
+      text-align: initial !important; 
+  }
+body.arabic .w-nav-overlay{
+    left: -30px !important;
+    right: auto;
+}
 }
 
 @media screen and (max-width: 767px) {
@@ -451,6 +504,9 @@ body.arabic .arrow-horizontal .arrow-vertical_number {
 
 	.w-nav-overlay {
 		right: -15px;
+	}
+	body.arabic .w-nav-overlay{
+		left: -15px !important;
 	}
 }
 
