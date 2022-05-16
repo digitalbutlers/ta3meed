@@ -1,9 +1,9 @@
-.pagination-container .fs-pagination ul {
+.js--pagination-container .fs-pagination ul {
 	display: flex;
 	column-gap: 5px;
 }
 
-.pagination-container .fs-pagination ul li a {
+.js--pagination-container .fs-pagination ul li a {
 	display: flex;
 	min-width: 56px;
 	height: 56px;
@@ -19,7 +19,7 @@
 	transition: all 0.3s ease;
 }
 
-.pagination-container .fs-pagination ul li a:hover {
+.js--pagination-container .fs-pagination ul li a:hover {
 	background-color: #64e8a4;
 	color: #fff !important;
 	transition: all 0.3s ease;
