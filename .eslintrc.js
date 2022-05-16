@@ -5,7 +5,6 @@ module.exports = {
 	},
 	extends: [
 		'airbnb-base',
-		'jquery',
 	],
 	parserOptions: {
 		ecmaVersion: 'latest',
