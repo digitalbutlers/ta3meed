@@ -1,20 +1,4 @@
-/** *menu-mob** */
-document.addEventListener('DOMContentLoaded', () => {
-	const targetEl = document.querySelector('.btn-absolute');
 
-	function callback(mutations, observer) {
-		if (targetEl.classList.contains('w--open')) {
-			document.querySelector('body').style.overflow = 'hidden';
-		} else {
-			document.querySelector('body').style.overflow = 'auto';
-		}
-	}
-	const observer = new MutationObserver(callback);
-	observer.observe(targetEl, {
-		attributes: true,
-	});
-});
-/** *menu-mob** */
 /** *include arabic version** */
 
 const body = document.querySelector('body');
@@ -36,6 +20,7 @@ function changeMarkup() {
 function initObserver() {
 	const targetEl = document.querySelector('aside.weglot_switcher');
 
+	// eslint-disable-next-line no-unused-vars
 	function callback(mutations, observer) {
 		if (targetEl.getAttribute('aria-activedescendant') === 'weglot-language-ar') {
 			body.classList.add('arabic');
@@ -53,10 +38,6 @@ function initializingVerification() {
 	changeMarkup();
 	const weglotContainer = document.querySelector('.weglot-container');
 	wrpSwitcherLanguage.append(weglotContainer);
-	/* const btnArabic = document.querySelector('#weglot-language-ar');
-	const btnEnglish = document.querySelector('#weglot-language-en');
-	btnArabic.addEventListener('click', changeMarkup );
-	btnEnglish.addEventListener('click', changeMarkup ); */
 	initObserver();
 }
 

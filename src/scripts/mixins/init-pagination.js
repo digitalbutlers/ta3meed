@@ -1,4 +1,4 @@
-(function () {
+function initPagination() {
 	// create a new Library instance and store it in a variable called "projectsGrid"
 	// eslint-disable-next-line no-undef
 	const projectsGrid = new FsLibrary('.js--collection-list');
@@ -22,6 +22,6 @@
 			enable: false,
 		},
 	});
-}());
+}
 
-
+initPagination();
