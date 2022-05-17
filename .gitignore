@@ -3,6 +3,7 @@ build/
 
 # editor files
 .idea/
+.vscode/
 
 # modules files
 node_modules/
