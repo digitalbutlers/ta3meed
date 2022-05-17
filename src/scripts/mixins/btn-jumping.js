@@ -1,12 +1,12 @@
 const locationDekstop = document.querySelector('[data-location="desktop"]');
 const locationMobile = document.querySelector('[data-location="mobile"]');
-const breakpoint = 992;
 
 const jumpingBtn = document.querySelector('[data-name="jumping-btn"]');
 
 function changeLocation() {
 	const currentWindowWidth = document.querySelector('body').clientWidth;
-	if (currentWindowWidth < breakpoint) {
+	// eslint-disable-next-line no-undef
+	if (currentWindowWidth < BREAKPOINTS.tablet) {
 		locationMobile.append(jumpingBtn);
 	} else {
 		locationDekstop.append(jumpingBtn);
@@ -14,4 +14,3 @@ function changeLocation() {
 }
 changeLocation();
 window.addEventListener('resize', changeLocation);
-
