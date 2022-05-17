@@ -18,15 +18,14 @@ function changeMarkup() {
 function initObserver() {
 	const targetEl = document.querySelector('aside.weglot_switcher');
 
-	// eslint-disable-next-line no-unused-vars
-	function callback(mutations, observer) {
+	function callbackLanguage() {
 		if (targetEl.getAttribute('aria-activedescendant') === 'weglot-language-ar') {
 			body.classList.add('arabic');
 		} else {
 			body.classList.remove('arabic');
 		}
 	}
-	const observerLanguage = new MutationObserver(callback);
+	const observerLanguage = new MutationObserver(callbackLanguage);
 	observerLanguage.observe(targetEl, {
 		attributes: true,
 	});

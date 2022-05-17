@@ -5,8 +5,7 @@ const decrAboutSuppliers = document.querySelector('.about-suppliers');
 document.addEventListener('DOMContentLoaded', () => {
 	const targetEl = document.querySelector('[word-content="clients"]');
 
-	// eslint-disable-next-line no-unused-vars
-	function callback(mutations, observer) {
+	function callbackSwitcher() {
 		if (targetEl.classList.contains('active')) {
 			decrAboutSuppliers.style.display = 'none';
 			decrAboutClients.style.display = 'block';
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			decrAboutSuppliers.style.display = 'block';
 		}
 	}
-	const observer = new MutationObserver(callback);
+	const observer = new MutationObserver(callbackSwitcher);
 	observer.observe(targetEl, {
 		attributes: true,
 	});

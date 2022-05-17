@@ -2,8 +2,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const targetEl = document.querySelector('[data-name = "btn-absolute"]');
 	const body = document.querySelector('body');
-	// eslint-disable-next-line no-unused-vars
-	function callback(mutations, observer) {
+
+	function callback() {
 		if (targetEl.classList.contains('w--open')) {
 			body.classList.add('overflow-hidden');
 		} else {
