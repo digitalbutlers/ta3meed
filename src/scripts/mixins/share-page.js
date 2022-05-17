@@ -45,5 +45,3 @@ function checkAtribute(event) {
 	}
 }
 window.addEventListener('click', checkAtribute);
-
-/* $(document).ready((function(){$(".share-article_link").click((function(t){let e=encodeURIComponent(document.URL),s=encodeURIComponent($("h1").text()),o=encodeURI($(".main-image").attr("src")),n=e,a=encodeURIComponent("");return a.length<1&&(a=s),$(this).hasClass("fb")&&(n="https://www.facebook.com/sharer.php?s=100&u="+e+"&p[title]="+s+"&p[summary]="+a+"&p[images][0]="+o),$(this).hasClass("link")&&(s=$(".meta-title").text(),n="https://www.linkedin.com/shareArticle?mini=true&url="+e+"&title="+s),$(this).hasClass("twitter")&&(n="http://twitter.com/share?text="+a+"&url="+e,console.log(n)),$(this).hasClass("whats-app")&&(n="https://api.whatsapp.com/send?text="+e,console.log(n)),window.open(n,s,"toolbar=0, status=0, width=640, height=640"),!1}))})); */

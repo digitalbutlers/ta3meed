@@ -8,10 +8,8 @@ function changeMarkup() {
 	setTimeout(() => {
 		const weglotSwitcher = document.querySelector('aside.weglot_switcher');
 		if (weglotSwitcher.getAttribute('aria-activedescendant') === 'weglot-language-ar') {
-			console.log(weglotSwitcher.getAttribute('aria-activedescendant'));
 			body.classList.add('arabic');
 		} else {
-			console.log(weglotSwitcher.getAttribute('aria-activedescendant'));
 			body.classList.remove('arabic');
 		}
 	}, 300);
