@@ -388,7 +388,9 @@ height: 0 !important;
 .nav-btns{
 	margin-inline-start: auto;
 }
-
+.article-content.w-condition-invisible + a.w-condition-invisible + .article-bottom_share{
+	margin-top: 0;
+}
 @media screen and (min-width: 1280px) {
 	.dropdown-lang {
 		margin-inline-end: 54px;
