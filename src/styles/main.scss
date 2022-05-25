@@ -11,56 +11,6 @@ body.arabic {
 	--blue: #f2f8ff;
 }
 
-@media (prefers-color-scheme: dark) {
-	body {
-		background: var(--white) !important;
-		color: var(--main);
-	}
-
-	.form-data_text,
-	.features-wrapper .features-description_important {
-		color: var(--main);
-	}
-
-	.cost-inner_text {
-		color: var(--main);
-	}
-
-	.dropdown-list,
-	.dropdown-list.w--open {
-		background-color: var(--white);
-	}
-
-	.features-wrapper,
-	.partners-wrapper,
-	.forms-wrapper {
-		background-color: var(--blue);
-	}
-
-	.features-inner .features-icon-wrp {
-		box-shadow: 0 30px 60px 0 rgb(0, 0, 0, 15%);
-	}
-
-	.features-icon-wrp {
-		background: var(--white);
-	}
-
-	.features-wrapper {
-		background-blend-mode: darken !important;
-	}
-
-	.features-wrapper {
-		background-image: none;
-	}
-
-	.features-inner_text {
-		font-size: 1, 125rem;
-	}
-
-	.features-inner_text.gradient-text {
-		background-image: #fff;
-	}
-}
 
 @media (prefers-color-scheme: light) {
 	body {
@@ -255,13 +205,17 @@ html,
 	transition: all 0.3s ease;
 }
 
+
+.burger-line {
+	background-color: currentColor;
+}
 .burger-line::before,
 .burger-line::after {
 	position: absolute;
 	left: 0;
 	width: 100%;
 	height: 3px;
-	background: var(--main);
+	background: currentColor;
 	border-radius: 25px;
 	content: '';
 	transition: all 0.3s ease;
@@ -414,7 +368,7 @@ body.arabic .arrow-horizontal .arrow-vertical_number {
     border: none !important;
     overflow: visible !important;
 }
-.wg-default.weglot-container--left, 
+.wg-default.weglot-container--left,
 .wg-default.weglot-container--left .country-selector{
 left: 0 !important;
 height: 0 !important;
@@ -482,7 +436,7 @@ height: 0 !important;
 		inset-inline-end: 0px;
     }
   .nav-link_drop{
-      text-align: initial !important; 
+      text-align: initial !important;
   }
 	.w-nav-overlay{
         right: auto;

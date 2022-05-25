@@ -1,0 +1,384 @@
+@media screen and (prefers-color-scheme: dark) {
+	$colors: (
+		background-primary: #1d1d1d,
+		background-secondary: #262626,
+		background-accent: #333,
+		text-primary: #fff,
+		text-secondary: rgba(255, 255, 255, 0.6),
+		primary: #006ffb,
+		accent: #64e8a4,
+	);
+
+	$breakpoints: (
+		xs: 479px,
+		sm: 767px,
+		md: 991px,
+		lg: 1279px,
+		xl: 1449px,
+	);
+
+	@mixin to-white {
+		filter: brightness(0) invert(1);
+	}
+
+	//noinspection ALL
+	@mixin gradient-text {
+		display: inline-block;
+		background-attachment: inherit !important;
+		-webkit-background-clip: text;
+		background-clip: text;
+		background-image: linear-gradient(45deg, map-get($colors, primary), map-get($colors, accent));
+		box-decoration-break: clone;
+		-webkit-font-smoothing: antialiased;
+		-webkit-text-fill-color: transparent;
+	}
+
+	//noinspection ALL
+	@mixin gradient-text-reset {
+		background-attachment: unset !important;
+		background-clip: unset;
+		background-image: unset;
+		box-decoration-break: unset;
+		-webkit-font-smoothing: unset;
+		-webkit-text-fill-color: unset;
+	}
+
+
+	.body {
+		background-color: map-get($colors, background-primary);
+		color: map-get($colors, text-primary);
+	}
+
+	.navbar {
+		background-color: map-get($colors, background-secondary);
+		@media screen and (max-width: map-get($breakpoints, sm)) {
+			background-color: transparent;
+		}
+	}
+
+	.nav-menu {
+		@media screen and (max-width: map-get($breakpoints, md)) {
+			background-color: map-get($colors, background-secondary);
+		}
+	}
+
+	.menu-button {
+		@media screen and (max-width: map-get($breakpoints, md)) {
+			background-color: map-get($colors, background-accent);
+		}
+	}
+
+	.burger-line {
+		color: map-get($colors, text-primary);
+	}
+
+	.w-nav-link,
+	.w-dropdown-link,
+	.w-dropdown-toggle,
+	.nav-link.w--current {
+		color: inherit;
+	}
+
+	.dropdown-list {
+		background-color: map-get($colors, background-secondary);
+		color: inherit;
+	}
+
+
+
+
+	.brand,
+	.icon::before {
+		@include to-white;
+	}
+
+	.weglot-container {
+		.wg-drop.country-selector {
+			background-color: map-get($colors, background-primary);
+
+			.wgcurrent::after {
+				@include to-white;
+			}
+
+			ul {
+				background-color: map-get($colors, background-secondary);
+			}
+
+			a {
+				color: map-get($colors, text-primary) !important;
+			}
+		}
+	}
+
+	.gradient-box {
+		background-color: map-get($colors, background-secondary);
+		background-image: unset;
+	}
+
+	.gray-box {
+		background-color: map-get($colors, background-accent);
+	}
+
+	.main-hero {
+		&-program-description,
+		&-paragraph {
+			color: map-get($colors, text-secondary);
+		}
+	}
+
+	.box-for-video_text,
+	.main-advantages_text {
+		color: map-get($colors, text-secondary);
+	}
+
+	.btn {
+		&.white {
+			color: map-get($colors, background-secondary);
+		}
+
+		&.green {
+			background-color: map-get($colors, primary);
+		}
+	}
+
+	.soon {
+		&-wrp.gradient-box {
+			background-image: unset;
+		}
+
+		&-bckg-img {
+			opacity: 0.01;
+		}
+
+		&-title {
+			@include gradient-text;
+		}
+
+		&-text {
+			color: map-get($colors, text-secondary);
+		}
+	}
+
+	.important-numbers_text {
+		color: map-get($colors, text-secondary);
+	}
+
+	.partner {
+		&s.title-xl {
+			@include gradient-text;
+		}
+
+		&s-wrapper {
+			background-color: map-get($colors, background-secondary);
+		}
+
+		&-item {
+			background-color: map-get($colors, background-accent);
+		}
+
+		&-list_img {
+			filter: invert(1);
+		}
+	}
+
+	.secondary-data {
+		&_title {
+			@include gradient-text;
+		}
+
+		&_secondary-title,
+		&_item-title {
+			color: map-get($colors, primary);
+		}
+
+		&_box {
+			background-color: map-get($colors, background-accent);
+			color: map-get($colors, text-primary);
+		}
+
+		&_bckg-img {
+			opacity: 0.25;
+		}
+
+
+		&_item-text.separate-box {
+			color: map-get($colors, text-primary);
+		}
+
+		&_descr,
+		&_secondary-list {
+			color: map-get($colors, text-secondary);
+		}
+	}
+
+	.footer-inner {
+		background-color: map-get($colors, background-secondary);
+		background-image: unset;
+	}
+
+	.finance {
+		&-box {
+			background-color: map-get($colors, background-secondary);
+			background-image: unset !important;
+		}
+
+		&-title_span {
+			@include gradient-text;
+			display: block;
+		}
+
+		&-list_step {
+			&-box-number {
+				background-color: map-get($colors, background-accent);
+				color: map-get($colors, text-primary);
+			}
+
+			&-description {
+				color: map-get($colors, text-primary) !important;
+			}
+		}
+	}
+
+	.key-benefits {
+		&_description {
+			color: map-get($colors, text-secondary);
+		}
+
+		&-benefit {
+			color: map-get($colors, text-primary);
+		}
+	}
+
+	.gray-box_number {
+		color: map-get($colors, text-primary);
+	}
+
+	.box-for-video {
+		border-top-color: map-get($colors, background-accent);
+		border-bottom-color: map-get($colors, background-accent);
+	}
+
+	.requirements {
+		&_wrapper {
+			background-color: map-get($colors, background-secondary);
+		}
+
+		&-text.gradient-text {
+			@include gradient-text-reset;
+			color: map-get($colors, text-primary);
+		}
+	}
+
+	.faq-benefit {
+		background-color: map-get($colors, background-secondary);
+	}
+
+	.soon-bckg-img.separate-box {
+		opacity: 0.01;
+	}
+
+	.mitigations-item_text {
+		color: map-get($colors, text-secondary);
+	}
+
+	.shariah-item_description {
+		color: map-get($colors, text-secondary);
+	}
+
+	.soon-bckg-img.e-invoicing {
+		opacity: 0.01;
+	}
+
+	.news-item_idate,
+	.news-item_description {
+		color: map-get($colors, text-secondary);
+	}
+
+	//noinspection Stylelint
+	.fs-pagination ul li:not(:hover, .fs-pagination-active) a {
+		background-color: map-get($colors, background-secondary) !important;
+		color: map-get($colors, text-primary) !important;
+	}
+
+	.article-top_date {
+		color: map-get($colors, text-secondary);
+	}
+
+	.article-network {
+		color: map-get($colors, text-secondary);
+
+		&:hover {
+			color: map-get($colors, text-primary);
+		}
+	}
+
+	.article-content,
+	.faq-answer-main {
+		p {
+			color: map-get($colors, text-primary);
+		}
+
+		ul {
+			color: map-get($colors, text-secondary);
+		}
+	}
+
+	.faq-item-main {
+		border-bottom-color: map-get($colors, background-accent);
+	}
+
+	.faq-collection {
+		border-top-color: map-get($colors, background-accent);
+	}
+
+	.faq-question_arrow {
+		@include to-white;
+	}
+
+	.article-bottom_share {
+		border-top-color: map-get($colors, background-accent);
+	}
+
+	.features-wrapper {
+		background-color: map-get($colors, background-secondary);
+		background-image: url('https://uploads-ssl.webflow.com/622f19ee4fc23007afdf1be3/62879f4528f46a3ebd9e6b45_622f30ab7fb1f0a145f88cd9_86b4dd8be57f875f3fbe33356b1f0ca7.png');
+	}
+
+	.features-icon-wrp {
+		background-color: map-get($colors, background-accent);
+	}
+
+	.features-inner_text.gradient-text {
+		@include gradient-text-reset;
+		color: map-get($colors, text-secondary);
+	}
+
+	.title-l.faq-question {
+		color: map-get($colors, text-secondary);
+	}
+
+	.faq-question::before {
+		background-color: map-get($colors, background-accent) !important;
+	}
+
+	.partners-wrapper.parnters-page,
+	.forms-wrapper {
+		background-color: map-get($colors, background-secondary);
+	}
+
+	.form-cards_inner {
+		background-color: map-get($colors, background-accent);
+	}
+
+	.form-cards_text {
+		color: map-get($colors, text-primary);
+	}
+
+	.cost-inner_text {
+		color: map-get($colors, text-secondary);
+	}
+
+	.invoicing-conclusion_title {
+		@include gradient-text;
+	}
+}
