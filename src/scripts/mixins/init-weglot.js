@@ -1,4 +1,4 @@
 // eslint-disable-next-line no-undef
 Weglot.initialize({
-	api_key: 'wg_00757cdc117b3fdd6eebc9e44a07d3da2',
+	api_key: 'wg_64edf9291fc3b707dfb7b42539e172ba3',
 });
