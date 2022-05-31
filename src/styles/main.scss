@@ -179,7 +179,14 @@ padding-inline-start: 25px;
 	background-repeat: no-repeat;
 	background-size: auto;
 }
-
+.w-icon-dropdown-toggle{
+	left: auto;
+    right: auto;
+    inset-inline-end: 0;
+}
+.footer-phone{
+	    padding-inline-start: 28px;
+}
 .footer-phone::before {
 	position: absolute;
 	inset-inline-start: 0px;
@@ -394,6 +401,10 @@ height: 0 !important;
 .article-content.w-condition-invisible + a.w-condition-invisible + .article-bottom_share{
 	margin-top: 0;
 }
+.faq-answer-wrp,
+.faq-answer-wrp.active{
+    padding-inline-end: 40px;
+}
 @media screen and (min-width: 1280px) {
 	.dropdown-lang {
 		margin-inline-end: 54px;
@@ -469,6 +480,10 @@ height: 0 !important;
 	.w-nav-overlay {
 		width: calc(100% + 30px) !important;
 	}
+	.faq-answer-wrp,
+	.faq-answer-wrp.active{
+    padding-inline-end: 0px;
+}
 }
 
 @media screen and (max-width: 370px) {
