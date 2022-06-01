@@ -33,7 +33,10 @@ body.arabic {
 		background-blend-mode: soft-light;
 	}
 }
-
+.js--disabled{
+	pointer-events: none;
+	opacity: 0.5;
+}
 html.w-mod-touch .gradient-text {
 	background-attachment: initial !important;
 }
