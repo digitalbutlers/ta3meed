@@ -381,16 +381,19 @@
 	.invoicing-conclusion_title {
 		@include gradient-text;
 	}
-	.shariah-img.img_dark-theme{
+
+	.shariah-img.img_dark-theme {
 		display: block;
 	}
-	.shariah-img.img_dark-theme + .shariah-img.img_light-theme{
+
+	.shariah-img.img_dark-theme + .shariah-img.img_light-theme {
 		display: none;
 	}
-	.shariah-img.img_dark-theme.w-condition-invisible + .shariah-img.img_light-theme{
+
+	.shariah-img.img_dark-theme.w-condition-invisible + .shariah-img.img_light-theme {
 		display: block;
 	}
 
 
-	
+
 }
