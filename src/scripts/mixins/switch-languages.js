@@ -1,13 +1,11 @@
-const currentHost = window.location.host;
-const currentSlug = window.location.pathname.slice(1, 4);
-const slugForBlog = window.location.pathname.slice(1, 5);
-const switcherLanguages = document.querySelectorAll('[data-name="switcher-language"]');
-let newSlug;
-let newUrl;
+function generateNewUrl() {
+	const currentHost = window.location.host;
+	const currentSlug = window.location.pathname.slice(1, 4);
+	const slugForBlog = window.location.pathname.slice(1, 5);
 
+	let newSlug;
 
-function createLocale() {
-	if (currentSlug === 'en/' || (currentSlug.length === 2 && currentSlug === 'en')) {
+	if (currentSlug === 'en/' || currentSlug === 'en') {
 		newSlug = window.location.pathname.slice(4);
 	} else if (slugForBlog === 'news') {
 		if (window.location.pathname.slice(1, 9) === 'news-en/') {
@@ -18,29 +16,33 @@ function createLocale() {
 	} else {
 		newSlug = `en${window.location.pathname}`;
 	}
-	newUrl = `https://${currentHost}/${newSlug}`;
-}
-createLocale();
-
-function setLocale() {
-	document.location.href = newUrl;
+	return `https://${currentHost}/${newSlug}`;
 }
 
-fetch(newUrl)
-	.then((response) => {
-		if (response.status === 404) {
-			switcherLanguages.forEach((btn) => {
+function toggleLocale() {
+	document.location.href = generateNewUrl();
+}
+
+(function checkIsPageExist() {
+	const switchersLanguages = document.querySelectorAll('[data-name="switcher-language"]');
+
+	fetch(generateNewUrl())
+		.then((response) => {
+			if (response.status !== 200) {
+				switchersLanguages.forEach((btn) => {
+					btn.classList.add('js--disabled');
+				});
+			} else {
+				switchersLanguages.forEach((btn) => {
+					btn.addEventListener('click', toggleLocale);
+				});
+			}
+		})
+		.catch((error) => {
+			switchersLanguages.forEach((btn) => {
 				btn.classList.add('js--disabled');
 			});
-		}
-	})
-	.catch((error) => {
-		switcherLanguages.forEach((btn) => {
-			btn.classList.add('js--disabled');
+			// eslint-disable-next-line no-console
+			console.error('error is', error);
 		});
-		console.log('error is', error);
-	});
-
-switcherLanguages.forEach((btn) => {
-	btn.addEventListener('click', setLocale);
-});
+}());
